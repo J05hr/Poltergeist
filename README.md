@@ -1,2 +1,2 @@
 # Poltergeist
-A lightweight windows utility to perform automated keyboard and mouse inputs.
+A lightweight windows aaplication to perform automated keyboard and mouse inputs.
