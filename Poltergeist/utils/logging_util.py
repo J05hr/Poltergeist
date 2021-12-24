@@ -6,8 +6,8 @@ from Poltergeist.utils import dir_util
 def new_logger():
     """Create and return a new logger for logging app output to a file"""
     # Get the logger file path.
-    log_path = files_util.get_log_dir().joinpath('log.txt')
-    files_util.dep_check(log_path)
+    log_path = dir_util.get_log_dir().joinpath('log.txt')
+    dir_util.dep_check(log_path)
 
     # Create a custom logger.
     logger = logging.getLogger("logger:"+str(time.time()))

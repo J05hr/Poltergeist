@@ -3,10 +3,9 @@ from Poltergeist.core import settings
 from Poltergeist.utils import dir_util
 
 
-sounds_dir = files_util.get_sounds_dir()
-config_dir = files_util.get_config_dir()
-config_filename = files_util.get_config_dir().joinpath('poltergeist_config.json')
-files_util.dep_check(config_filename)
+config_dir = dir_util.get_config_dir()
+config_filename = dir_util.get_config_dir().joinpath('poltergeist_config.json')
+dir_util.dep_check(config_filename)
 
 
 """defaults: (ptt mode, y key, t key, don't autorun, don't start hidden, minimize to tray,

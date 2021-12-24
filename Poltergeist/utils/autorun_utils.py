@@ -10,12 +10,12 @@ app_data = shell.SHGetFolderPath(0, shellcon.CSIDL_APPDATA, None, 0)
 def add_autorun(logger):
     """Attempt to add a shortcut for the exe to the startup folder so it will autorun on startup."""
     try:
-        target = files_util.get_cwd().joinpath('Poltergeist.exe')
+        target = dir_util.get_cwd().joinpath('Poltergeist.exe')
         path = Path(app_data + '/Microsoft/Windows/Start Menu/Programs/Startup/Poltergeist.exe.lnk')
         shll = client.Dispatch('WScript.Shell')
         shortcut = shll.CreateShortCut(str(path))
         shortcut.TargetPath = str(target)
-        shortcut.WorkingDirectory = str(files_util.get_cwd())
+        shortcut.WorkingDirectory = str(dir_util.get_cwd())
         shortcut.Save()
     except Exception as e:
         logger.error("Failed to add startup item, " + str(e), exc_info=True)

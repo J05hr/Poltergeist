@@ -5,8 +5,8 @@ from Poltergeist.utils import settings_util, autorun_utils, dir_util
 from Poltergeist.gui import about_window, ptt_keybinding_window, toggle_keybinding_window, custom_sounds_window
 
 
-main_window_layout_file = files_util.get_layouts_dir().joinpath('main_window.ui')
-files_util.dep_check(main_window_layout_file)
+main_window_layout_file = dir_util.get_layouts_dir().joinpath('main_window.ui')
+dir_util.dep_check(main_window_layout_file)
 FormClass, BaseClass = uic.loadUiType(main_window_layout_file)
 
 
@@ -19,8 +19,8 @@ class MainWindow(BaseClass, FormClass):
         # Setup
         self.parent_app = app
         self.setupUi(self)
-        icon_filepath = files_util.get_icons_dir().joinpath('mic.png')
-        files_util.dep_check(icon_filepath)
+        icon_filepath = dir_util.get_icons_dir().joinpath('mic.png')
+        dir_util.dep_check(icon_filepath)
         self.setWindowIcon(QtGui.QIcon(str(icon_filepath)))
 
         # Windows

@@ -3,8 +3,8 @@ from PyQt5 import uic, QtGui, QtWidgets
 from Poltergeist.utils import settings_util, dir_util
 
 
-custom_sounds_window_layout_file = files_util.get_layouts_dir().joinpath('custom_sounds_window.ui')
-files_util.dep_check(custom_sounds_window_layout_file)
+custom_sounds_window_layout_file = dir_util.get_layouts_dir().joinpath('custom_sounds_window.ui')
+dir_util.dep_check(custom_sounds_window_layout_file)
 FormClass, BaseClass = uic.loadUiType(custom_sounds_window_layout_file)
 
 
@@ -17,8 +17,8 @@ class CustomSoundsWindow(BaseClass, FormClass):
         # Setup
         self.parent_app = app
         self.setupUi(self)
-        icon_filepath = files_util.get_icons_dir().joinpath('mic.png')
-        files_util.dep_check(icon_filepath)
+        icon_filepath = dir_util.get_icons_dir().joinpath('mic.png')
+        dir_util.dep_check(icon_filepath)
         self.setWindowIcon(QtGui.QIcon(str(icon_filepath)))
 
         # File browsing
@@ -53,7 +53,7 @@ class CustomSoundsWindow(BaseClass, FormClass):
     def mute_browse_button_cb(self):
         """Callback to the mute sound browse button, updates the mute_sound setting on change."""
         self.mute_browse_dialog = QtWidgets.QFileDialog()
-        sounds_dir = files_util.get_sounds_dir()
+        sounds_dir = dir_util.get_sounds_dir()
         self.mute_sound_filename = QtWidgets.QFileDialog.getOpenFileName(self.mute_browse_dialog, "", str(sounds_dir))
         if self.mute_sound_filename[0] != "" and Path(self.mute_sound_filename[0]).is_file():
             self.parent_app.settings.setting["sound_files"][0]["mute_sound"] = Path(self.mute_sound_filename[0]).name
@@ -63,7 +63,7 @@ class CustomSoundsWindow(BaseClass, FormClass):
     def unmute_browse_button_cb(self):
         """Callback to the unmute sound browse button, updates the unmute_sound setting on change."""
         self.unmute_browse_dialog = QtWidgets.QFileDialog()
-        sounds_dir = files_util.get_sounds_dir()
+        sounds_dir = dir_util.get_sounds_dir()
         self.unmute_sound_filename = QtWidgets.QFileDialog.getOpenFileName(self.mute_browse_dialog, "", str(sounds_dir))
         if self.unmute_sound_filename[0] != "" and Path(self.unmute_sound_filename[0]).is_file():
             self.parent_app.settings.setting["sound_files"][1]["unmute_sound"] = Path(self.unmute_sound_filename[0]).name

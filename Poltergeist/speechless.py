@@ -97,12 +97,12 @@ class Poltergeist:
         """The main run method to start the GUI and execute the program."""
 
         # Get icon.
-        icon_filepath = files_util.get_icons_dir().joinpath('mutemic.png')
-        files_util.dep_check(icon_filepath)
+        icon_filepath = dir_util.get_icons_dir().joinpath('mutemic.png')
+        dir_util.dep_check(icon_filepath)
 
         # Get the Style
-        style_filepath = files_util.get_layouts_dir().joinpath('styles\\main_style.qss')
-        files_util.dep_check(style_filepath)
+        style_filepath = dir_util.get_layouts_dir().joinpath('styles\\main_style.qss')
+        dir_util.dep_check(style_filepath)
 
         # Run the GUI.
         self.gui_app = QApplication(sys.argv)

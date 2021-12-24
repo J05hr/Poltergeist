@@ -15,8 +15,8 @@ def mute(app, logger):
     """Performs the mute action by sending the windows commands and starting a sound playback thread."""
 
     # Set the icon.
-    icon_filepath = files_util.get_icons_dir().joinpath('mutemic.png')
-    files_util.dep_check(icon_filepath)
+    icon_filepath = dir_util.get_icons_dir().joinpath('mutemic.png')
+    dir_util.dep_check(icon_filepath)
     app.tray.setIcon(QtGui.QIcon(str(icon_filepath)))
 
     # Send the win32 app command.
@@ -27,7 +27,7 @@ def mute(app, logger):
 
     # Play mute sound if enabled by the settings.
     if app.settings.setting["enable_mute_sound"]:
-        mute_sound_path = files_util.get_sounds_dir().joinpath(app.settings.setting["sound_files"][0]["mute_sound"])
+        mute_sound_path = dir_util.get_sounds_dir().joinpath(app.settings.setting["sound_files"][0]["mute_sound"])
         try:
             sound_output_thread.SoundOutputThread(
                 mute_sound_path,
@@ -40,8 +40,8 @@ def unmute(app, logger):
     """Performs the unmute action by sending the windows commands and starting a sound playback thread."""
 
     # Set the icon.
-    icon_filepath = files_util.get_icons_dir().joinpath('unmutemic.png')
-    files_util.dep_check(icon_filepath)
+    icon_filepath = dir_util.get_icons_dir().joinpath('unmutemic.png')
+    dir_util.dep_check(icon_filepath)
     app.tray.setIcon(QtGui.QIcon(str(icon_filepath)))
 
     # Send the win32 app command.
@@ -51,7 +51,7 @@ def unmute(app, logger):
 
     # Play unmute sound if enabled by the settings.
     if app.settings.setting["enable_unmute_sound"]:
-        unmute_sound_path = files_util.get_sounds_dir().joinpath(app.settings.setting["sound_files"][1]["unmute_sound"])
+        unmute_sound_path = dir_util.get_sounds_dir().joinpath(app.settings.setting["sound_files"][1]["unmute_sound"])
         try:
             sound_output_thread.SoundOutputThread(
                 unmute_sound_path,

@@ -3,8 +3,8 @@ from PyQt5 import uic, QtWidgets, QtGui
 from Poltergeist.utils import settings_util, dir_util
 
 
-toggle_keybinding_window_layout_file = files_util.get_layouts_dir().joinpath('toggle_keybinding_window.ui')
-files_util.dep_check(toggle_keybinding_window_layout_file)
+toggle_keybinding_window_layout_file = dir_util.get_layouts_dir().joinpath('toggle_keybinding_window.ui')
+dir_util.dep_check(toggle_keybinding_window_layout_file)
 FormClass, BaseClass = uic.loadUiType(toggle_keybinding_window_layout_file)
 
 
@@ -15,8 +15,8 @@ class ToggleKeyBindingWindow(BaseClass, FormClass):
         # Setup
         super(ToggleKeyBindingWindow, self).__init__()
         self.setupUi(self)
-        icon_filepath = files_util.get_icons_dir().joinpath('mic.png')
-        files_util.dep_check(icon_filepath)
+        icon_filepath = dir_util.get_icons_dir().joinpath('mic.png')
+        dir_util.dep_check(icon_filepath)
         self.setWindowIcon(QtGui.QIcon(str(icon_filepath)))
         self.keyboard_listener = None
         self.mouse_listener = None
