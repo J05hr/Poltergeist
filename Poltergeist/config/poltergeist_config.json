@@ -1,0 +1,1 @@
+{"mode": "ptt", "toggle_keybinding": "y", "ptt_keybinding": "t", "autorun": false, "start_hidden": false, "minimize_to_tray": true, "enable_mute_sound": true, "enable_unmute_sound": true, "sound_files": [{"mute_sound": "beep300.wav"}, {"unmute_sound": "beep750.wav"}], "sound_volume": 0.5}

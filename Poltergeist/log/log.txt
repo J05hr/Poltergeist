@@ -1,0 +1,30 @@
+2021-03-08 20:55:53,956 - ERROR - Fatal Error, arguments did not match any overloaded call:
+  QFile(): too many arguments
+  QFile(str): argument 1 has unexpected type 'WindowsPath'
+  QFile(QObject): argument 1 has unexpected type 'WindowsPath'
+  QFile(str, QObject): argument 1 has unexpected type 'WindowsPath'
+Traceback (most recent call last):
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\Poltergeist.py", line 151, in <module>
+    Poltergeist.run()
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\Poltergeist.py", line 109, in run
+    self.style_file = QFile(style_filepath)
+TypeError: arguments did not match any overloaded call:
+  QFile(): too many arguments
+  QFile(str): argument 1 has unexpected type 'WindowsPath'
+  QFile(QObject): argument 1 has unexpected type 'WindowsPath'
+  QFile(str, QObject): argument 1 has unexpected type 'WindowsPath'
+2021-03-08 20:56:14,280 - ERROR - Fatal Error, arguments did not match any overloaded call:
+  QFile(): too many arguments
+  QFile(str): argument 1 has unexpected type 'WindowsPath'
+  QFile(QObject): argument 1 has unexpected type 'WindowsPath'
+  QFile(str, QObject): argument 1 has unexpected type 'WindowsPath'
+Traceback (most recent call last):
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\Poltergeist.py", line 151, in <module>
+    Poltergeist.run()
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\Poltergeist.py", line 109, in run
+    self.style_file = QFile(style_filepath)
+TypeError: arguments did not match any overloaded call:
+  QFile(): too many arguments
+  QFile(str): argument 1 has unexpected type 'WindowsPath'
+  QFile(QObject): argument 1 has unexpected type 'WindowsPath'
+  QFile(str, QObject): argument 1 has unexpected type 'WindowsPath'
