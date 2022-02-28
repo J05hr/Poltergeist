@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>457</width>
-    <height>165</height>
+    <width>901</width>
+    <height>710</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -27,7 +27,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../icons/mic.png</normaloff>../icons/mic.png</iconset>
+    <normaloff>../icons/Ghost_Black.png</normaloff>../icons/Ghost_Black.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -37,64 +37,6 @@
     </sizepolicy>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
-    <property name="bottomMargin">
-     <number>0</number>
-    </property>
-    <item>
-     <widget class="QFrame" name="frame">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="0">
-        <widget class="QLabel" name="mainTitleLabel">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>500</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Unispace</family>
-           <pointsize>28</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-           <underline>true</underline>
-          </font>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
-         </property>
-         <property name="autoFillBackground">
-          <bool>false</bool>
-         </property>
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;Poltergeist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
     <item>
      <widget class="QFrame" name="frame_2">
       <property name="sizePolicy">
@@ -113,52 +55,164 @@
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="spacing">
-        <number>15</number>
-       </property>
-       <property name="leftMargin">
-        <number>5</number>
-       </property>
-       <property name="topMargin">
-        <number>5</number>
-       </property>
-       <property name="rightMargin">
-        <number>5</number>
-       </property>
-       <property name="bottomMargin">
-        <number>5</number>
-       </property>
-       <item alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
          </property>
-         <property name="font">
-          <font>
-           <family>Unispace</family>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
+         <property name="autoFillBackground">
+          <bool>false</bool>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
+         <property name="tabShape">
+          <enum>QTabWidget::Rounded</enum>
          </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
+         <property name="currentIndex">
+          <number>0</number>
          </property>
-         <property name="text">
-          <string>Global microphone control for the default input device.</string>
+         <property name="elideMode">
+          <enum>Qt::ElideNone</enum>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+         <property name="documentMode">
+          <bool>false</bool>
          </property>
-         <property name="wordWrap">
+         <property name="tabsClosable">
+          <bool>false</bool>
+         </property>
+         <property name="movable">
           <bool>true</bool>
          </property>
+         <property name="tabBarAutoHide">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="about_tab">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <attribute name="title">
+           <string>About</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QFrame" name="frame">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>75</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="0">
+               <widget class="QLabel" name="mainTitleLabel">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>10000</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Unispace</family>
+                  <pointsize>28</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                  <underline>true</underline>
+                 </font>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;Poltergeist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>15</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Unispace</family>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+                <property name="text">
+                 <string>Automated keyboard and mouse inputs</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="routines_tab">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <attribute name="title">
+           <string>Routines</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="new_tab">
+          <attribute name="title">
+           <string>Create or Modify</string>
+          </attribute>
+         </widget>
         </widget>
        </item>
       </layout>
@@ -171,7 +225,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>457</width>
+     <width>901</width>
      <height>26</height>
     </rect>
    </property>
@@ -194,61 +248,22 @@
     <property name="title">
      <string>Options</string>
     </property>
-    <addaction name="actionAutorun"/>
-    <addaction name="actionStart_hidden"/>
-    <addaction name="actionMinimize_to_tray"/>
-   </widget>
-   <widget class="QMenu" name="menuDevice">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="title">
-     <string>Device</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuNotifications">
-    <property name="title">
-     <string>Notifications</string>
-    </property>
-    <widget class="QMenu" name="menuPlay_Sounds">
-     <property name="title">
-      <string>Enable sounds</string>
-     </property>
-     <addaction name="actionEnableMuteSound"/>
-     <addaction name="actionEnableUnmuteSound"/>
-    </widget>
-    <addaction name="menuPlay_Sounds"/>
-    <addaction name="actionCustom_Sounds"/>
+    <addaction name="action_auto_run"/>
+    <addaction name="action_start_hidden"/>
+    <addaction name="action_minimize_to_tray"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
-     <string>About</string>
+     <string>Info</string>
     </property>
-    <addaction name="actionInfo"/>
+    <addaction name="action_info"/>
+    <addaction name="action_log"/>
    </widget>
-   <widget class="QMenu" name="menuKeybinding_2">
-    <property name="title">
-     <string>Keybinding</string>
-    </property>
-    <addaction name="actionPTTkeybinding"/>
-    <addaction name="actionTogglekeybinding"/>
-   </widget>
-   <widget class="QMenu" name="menuMode">
-    <property name="title">
-     <string>Mode</string>
-    </property>
-    <addaction name="actionPTTMode"/>
-    <addaction name="actionToggleMode"/>
-   </widget>
-   <addaction name="menuMode"/>
-   <addaction name="menuKeybinding_2"/>
    <addaction name="menuOptions"/>
-   <addaction name="menuNotifications"/>
-   <addaction name="menuDevice"/>
    <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionAutorun">
+  <action name="action_auto_run">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -280,12 +295,12 @@
     <string>Start muted</string>
    </property>
   </action>
-  <action name="actionInfo">
+  <action name="action_info">
    <property name="text">
     <string>Application info</string>
    </property>
   </action>
-  <action name="actionMinimize_to_tray">
+  <action name="action_minimize_to_tray">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -293,7 +308,7 @@
     <string>Minimize to tray</string>
    </property>
   </action>
-  <action name="actionStart_hidden">
+  <action name="action_start_hidden">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -341,6 +356,11 @@
    </property>
    <property name="text">
     <string>enable un-mute sound</string>
+   </property>
+  </action>
+  <action name="action_log">
+   <property name="text">
+    <string>Log</string>
    </property>
   </action>
  </widget>

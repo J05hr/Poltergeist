@@ -15,6 +15,6 @@ class AboutWindow(BaseClass, FormClass):
 
         # Setup
         self.setupUi(self)
-        icon_filepath = dir_util.get_icons_dir().joinpath('mic.png')
+        icon_filepath = dir_util.get_icons_dir().joinpath('Ghost_Black.png')
         dir_util.dep_check(icon_filepath)
         self.setWindowIcon(QtGui.QIcon(str(icon_filepath)))

@@ -28,3 +28,74 @@ TypeError: arguments did not match any overloaded call:
   QFile(str): argument 1 has unexpected type 'WindowsPath'
   QFile(QObject): argument 1 has unexpected type 'WindowsPath'
   QFile(str, QObject): argument 1 has unexpected type 'WindowsPath'
+2022-02-25 19:18:01,830 - ERROR - Fatal Error, Required file C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\icons\mutemic.png doesn't exist
+Traceback (most recent call last):
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 69, in <module>
+    Poltergeist.run()
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 34, in run
+    dir_util.dep_check(icon_filepath)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\utils\dir_util.py", line 57, in dep_check
+    raise FileExistsError(f"Required file {path} doesn't exist")
+FileExistsError: Required file C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\icons\mutemic.png doesn't exist
+2022-02-25 19:32:04,493 - ERROR - Fatal Error, Required file C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\icons\mic.png doesn't exist
+Traceback (most recent call last):
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 69, in <module>
+    Poltergeist.run()
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 47, in run
+    self.win = main_window.MainWindow(self)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\gui\main_window.py", line 21, in __init__
+    dir_util.dep_check(icon_filepath)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\utils\dir_util.py", line 57, in dep_check
+    raise FileExistsError(f"Required file {path} doesn't exist")
+FileExistsError: Required file C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\icons\mic.png doesn't exist
+2022-02-25 19:35:31,438 - ERROR - Fatal Error, 'toggle_keybinding'
+Traceback (most recent call last):
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 69, in <module>
+    Poltergeist.run()
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 47, in run
+    self.win = main_window.MainWindow(self)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\gui\main_window.py", line 26, in __init__
+    self.toggle_keybinding_win = toggle_keybinding_window.ToggleKeyBindingWindow(self.parent_app)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\gui\toggle_keybinding_window.py", line 27, in __init__
+    self.toggle_key_input_text.setText(self.parent_app.settings.setting["toggle_keybinding"])
+KeyError: 'toggle_keybinding'
+2022-02-25 19:38:07,354 - ERROR - Fatal Error, 'mode'
+Traceback (most recent call last):
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 69, in <module>
+    Poltergeist.run()
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 47, in run
+    self.win = main_window.MainWindow(self)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\gui\main_window.py", line 30, in __init__
+    if self.parent_app.settings.setting['mode'] == 'ptt':
+KeyError: 'mode'
+2022-02-25 19:48:36,123 - ERROR - Fatal Error, Required file C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\icons\mic.png doesn't exist
+Traceback (most recent call last):
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 69, in <module>
+    Poltergeist.run()
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 47, in run
+    self.win = main_window.MainWindow(self)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\gui\main_window.py", line 26, in __init__
+    self.log_win = log_window.LogWindow(self.parent_app)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\gui\log_window.py", line 20, in __init__
+    files_util.dep_check(icon_filepath)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\utils\files_util.py", line 56, in dep_check
+    raise FileExistsError(f"Required file {path} doesn't exist")
+FileExistsError: Required file C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\icons\mic.png doesn't exist
+2022-02-25 19:49:34,319 - ERROR - Fatal Error, 'MainWindow' object has no attribute 'action_auto_run'
+Traceback (most recent call last):
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 69, in <module>
+    Poltergeist.run()
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 47, in run
+    self.win = main_window.MainWindow(self)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\gui\main_window.py", line 31, in __init__
+    self.action_auto_run.triggered.connect(self.autorun_action_cb)
+AttributeError: 'MainWindow' object has no attribute 'action_auto_run'
+2022-02-25 19:55:13,845 - ERROR - Fatal Error, 'MainWindow' object has no attribute 'action_log'
+Traceback (most recent call last):
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 69, in <module>
+    Poltergeist.run()
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\poltergeist.py", line 47, in run
+    self.win = main_window.MainWindow(self)
+  File "C:\Users\J05h\Desktop\Projects\Poltergeist\Poltergeist\gui\main_window.py", line 39, in __init__
+    self.action_log.triggered.connect(self.log_window_action_cb)
+AttributeError: 'MainWindow' object has no attribute 'action_log'

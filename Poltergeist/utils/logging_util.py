@@ -1,13 +1,13 @@
 import time
 import logging
-from Poltergeist.utils import dir_util
+from Poltergeist.utils import files_util
 
 
 def new_logger():
     """Create and return a new logger for logging app output to a file"""
     # Get the logger file path.
-    log_path = dir_util.get_log_dir().joinpath('log.txt')
-    dir_util.dep_check(log_path)
+    log_path = files_util.get_log_dir().joinpath('log.txt')
+    files_util.dep_check(log_path)
 
     # Create a custom logger.
     logger = logging.getLogger("logger:"+str(time.time()))
@@ -24,3 +24,14 @@ def new_logger():
     logger.addHandler(f_handler)
 
     return logger
+
+
+def read_log(log_filename, logger):
+    """Try to read the log"""
+    try:
+        with open(log_filename, "r") as log_file:
+            log_text = log_file.read()
+        return log_text
+
+    except Exception as e:
+        logger.error("Error reading log, " + str(e), exc_info=True)
